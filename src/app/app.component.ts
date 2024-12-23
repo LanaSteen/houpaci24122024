@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ThemeServiceService } from './common/services/theme-service.service';
+import { ThemeService } from './common/services/theme.service';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+// https://jsonplaceholder.typicode.com/guide/
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,7 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent {
   title = 'houpaci';
   isDarkMode?: boolean;
-  constructor(private themeService: ThemeServiceService){
+  constructor(private themeService: ThemeService){
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
     });

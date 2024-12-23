@@ -18,13 +18,13 @@ export const routes:Routes = [
       path: 'home',
       loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
     },
+    {
+        path: 'product',
+        loadComponent: () => import('./product-list/product-list.component').then(m => m.ProductListComponent)
+      },
     { 
       path: '', 
       redirectTo: '', 
       pathMatch: 'full' 
-    },
-    {
-      path: 'home', 
-      loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
     }
   ];

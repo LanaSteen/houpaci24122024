@@ -1,11 +1,45 @@
 <section class="main" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
     <div class="leftSide">
+        <div class="contactInfo">
+            <h2>Contact</h2>
+            <p >Houpaci Leather Workshop</p>
+            <p><a [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+                href="tel:+995598744500">Tel: (+995) 598 744 500</a></p>
+            <p><a [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+                href="mailto:info@houpaci.com?subject=Subscription Request&body=Hello, I would like to subscribe.">{{'info@houpaci.com'}}</a></p>
+            <div class="socials" >
+                <a [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+                 href="https://www.instagram.com/houpa.ci/?hl=en"> <i class="fa-brands fa-instagram"></i></a>
+                <a [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+                href="https://www.facebook.com/houpacii/"> <i class="fa-brands fa-facebook"></i></a>
+                <a [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+                href="https://www.tiktok.com/@houpaci1"> <i class="fa-brands fa-tiktok"></i></a>
+                <a [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+                href="https://maps.app.goo.gl/smKUCWHfvqSdjUjM7"> <i class="fa-solid fa-location-crosshairs"></i></a>
+            </div>
+            <p>© 2025 by Lana Steen. Powered and secured by Houpaci</p>
+        </div>
 
     </div>
     <div class="rightSide">
-        <p-floatlabel variant="on">
-            <input pInputText id="on_label" [(ngModel)]="emailAddress" autocomplete="on" />
+        <form (ngSubmit)="subscribe()" #emailForm="ngForm">
+          <p-floatlabel variant="on" class="onLabelInp">
+            <input
+              type="email"
+              pInputText
+              id="on_label"
+              [(ngModel)]="emailAddress"
+              name="emailAddress"
+              #email="ngModel"
+              autocomplete="on"
+              required
+              email
+            />
             <label for="on_label">Email</label>
-        </p-floatlabel>
-    </div>
+          </p-floatlabel>
+      
+          <input class="btnInp" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+           type="submit" value="Subscribe" [disabled]="emailForm.invalid" />
+        </form>
+      </div>
 </section>

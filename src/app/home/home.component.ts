@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ThemeServiceService } from '../common/services/theme-service.service';
+import { ThemeService } from '../common/services/theme.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   isDarkMode?: boolean;
-  constructor(private themeService: ThemeServiceService){
+  constructor(private themeService: ThemeService){
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
       console.log(this.isDarkMode)
