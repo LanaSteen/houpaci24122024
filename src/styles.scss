@@ -1,3 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
- //@import '../node_modules/primeng/resources/primeng.min.css';
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+*{
+    /* cursor : url('assets/logo-removebg-preview.png'), auto; */
+   cursor: url("https://miro.medium.com/v2/resize:fit:2000/1*vE_dpDWyNenjd1dE0cJgcQ.png"), auto;
+}
+
+body {
+    cursor: url('https://miro.medium.com/v2/resize:fit:2000/1*vE_dpDWyNenjd1dE0cJgcQ.png'), auto;
+}
+
+
+body, html, *{
+    /* cursor: url('https://miro.medium.com/v2/resize:fit:2000/1*vE_dpDWyNenjd1dE0cJgcQ.png'), auto; */
+    /* cursor: pointer; */
+}
+
+html::-webkit-scrollbar{
+    width: 15px;
+}
+html::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.801);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 166, 0, 0.788);
+    border-radius: 10px;
+}
+
+.dark-mode {
+    background-color: rgb(155, 145, 145) !important;
+  }
+  
+.light-mode {
+    background-color: rgb(240, 236, 236) !important;
+
+}

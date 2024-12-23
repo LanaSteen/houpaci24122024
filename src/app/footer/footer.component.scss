@@ -44,7 +44,7 @@
     .rightSide{
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         form{
             width: 400px;
@@ -73,6 +73,7 @@
 
                 label{
                     margin-left: 10px;
+                    color: white;
                 }
                 // flex-direction: column;
                 .p-inputtext{
@@ -131,6 +132,7 @@
             }
             .rightSide{
                 width: 100%;
+                justify-content: center;
                     form{
                         width: 250px;
                     }

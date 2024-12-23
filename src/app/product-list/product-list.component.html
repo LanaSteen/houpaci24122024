@@ -1,25 +1,4 @@
-<!-- <section  [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
 
-    <div class="product-list">
-        <div *ngFor="let product of paginatedProducts" class="product-item">
-          <div class="immCont" style="background-image: url({{product.picturePath}});">
-          </div>
-          <h3>{{ product.title }}</h3>
-          <p>{{ product.description }}</p>
-        </div>
-      </div>
-      
-  
-      <div class="pagination">
-        <button (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
-        <span>Page {{ currentPage }}</span>
-        <button (click)="setPage(currentPage + 1)" [disabled]="currentPage * itemsPerPage >= products.length">Next</button>
-      </div>
-
-      <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120" [rowsPerPageOptions]="[10, 20, 30]" />
-
-  
-</section> -->
 
 <section [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
     <div class="product-list">
@@ -31,7 +10,7 @@
       </div>
     </div>
   
-    <!-- PrimeNG Paginator -->
+
     <p-paginator 
       (onPageChange)="onPageChange($event)" 
       [first]="first" 
