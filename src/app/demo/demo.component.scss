@@ -1,0 +1,344 @@
+.dark-mode {
+    background-color: rgb(155, 145, 145) !important;
+  }
+  
+  .light-mode {
+    background-color: rgb(240, 236, 236) !important;
+
+  }
+
+.parent{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 200px;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round{
+    width: 500px;
+    height: 500px;
+    /* border: 3px solid black; */
+    border-radius: 50%;
+    top: 0;
+    position: absolute;
+}
+.texts{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.texts h1{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 900;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.texts h3 {
+   text-align: center;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   line-height: 50%;
+   letter-spacing: 5px;
+   font-size: 20px;
+}
+
+.clock{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    /* border: 3px solid red; */
+    border-radius: 50%;
+    top: 0;
+    z-index: 5;
+}
+
+/* .line{
+    width: 2px;
+    height: 900px;
+    background-color: blue;
+    position: absolute;
+
+} */
+.lineClock{
+    width: 4px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+}
+.AlineClock{
+    width: 4px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+}
+.AlineClock1{
+    top: 43px;
+    left: 246px;
+   
+}
+.AlineClock2{
+    top: 70px;
+    left: 342px;
+    transform: rotate(32deg);
+}
+.AlineClock3{
+    top: 146px;
+    left: 411px;
+    transform: rotate(64deg);
+}
+.AlineClock4{
+    top: 227px;
+    left: 427px;
+    transform: rotate(90deg);
+}
+.AlineClock5{
+    top: 316px;
+    left: 409px;
+    transform: rotate(118deg);
+}
+.AlineClock6{
+    top: 392px;
+    left: 343px;
+    transform: rotate(150deg);
+}
+.AlineClock7{
+    top: 423px;
+    left: 247px;
+    transform: rotate(180deg);
+}
+.AlineClock8{
+    top: 395px;
+    left: 141px;
+    transform: rotate(213deg);
+}
+.AlineClock9{
+    top: 315px;
+    left: 67px;
+    transform: rotate(244deg);
+}
+.AlineClock10{
+    top: 228px;
+    left: 51px;
+    transform: rotate(270deg);
+}
+.AlineClock11{
+    top: 136px;
+    left: 72px;
+    transform: rotate(298deg);
+}
+.AlineClock12{
+    top: 65px;
+    left: 144px;
+    transform: rotate(330deg);
+}
+
+.lineClock1{
+    top: -101px;
+    left: 246px;
+   
+}
+.lineClock2{
+    top: -52px;
+    left: 405px;
+    transform: rotate(32deg);
+}
+.lineClock3{
+    top: 69px;
+    left: 517px;
+    transform: rotate(64deg);
+}
+.lineClock4{
+    top: 202px;
+    left: 544px;
+    transform: rotate(90deg);
+}
+.lineClock5{
+    top: 343px;
+    left: 506px;
+    transform: rotate(118deg);
+}
+.lineClock6{
+    top: 456px;
+    left: 395px;
+    transform: rotate(150deg);
+}
+.lineClock7{
+    top: 494px;
+    left: 247px;
+    transform: rotate(180deg);
+}
+.lineClock8{
+    top: 453px;
+    left: 88px;
+    transform: rotate(213deg);
+}
+.lineClock9{
+    top: 333px;
+    left: -22px;
+    transform: rotate(244deg);
+}
+.lineClock10{
+    top: 202px;
+    left: -53px;
+    transform: rotate(270deg);
+}
+.lineClock11{
+    top: 63px;
+    left: -20px;
+    transform: rotate(298deg);
+}
+.lineClock12{
+    top: -61px;
+    left: 97px;
+    transform: rotate(330deg);
+}
+.line1{
+    top: -100px;
+    left: 246px;
+}
+.line2{
+    top: -280px;
+    left: 298px;
+    transform: rotate(32deg);
+}
+.line3{
+    top: -242px;
+    left: 337px;
+    transform: rotate(64deg);
+}
+.line4{
+    top: -197px;
+    left: 425px;
+    transform: rotate(90deg);
+
+}
+.line5{
+    top: -136px;
+    left: 360px;
+    transform: rotate(-62deg);
+}
+.line6{
+    top: -110px;
+    left: 300px;
+    transform: rotate(-30deg);
+}
+
+main{
+    margin-bottom: 100px;
+}
+
+
+
+.clockArrowSmall{
+    width: 10px;
+    height: 200px;
+    position: absolute;
+    background-color:  rgba(255, 166, 0, 0.637);
+    z-index: 15;
+    top: 55px;
+    left: 235px;
+    transform: rotate(-5deg);
+    border-radius: 5px;
+}
+
+.clockArrowLong{
+    width: 10px;
+    height: 300px;
+    position: absolute;
+    background-color: rgba(255, 166, 0, 0.637);
+    z-index: 15;
+    transform: rotate(5deg);
+    border-radius: 5px;
+     
+
+}
+.longArrowParent{
+    animation: roatate 60s linear infinite;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    /* background-color: red; */
+    top: 242px;
+    left: 230px;
+    z-index: 15;
+}
+.smallRound{
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   background-color: orange;
+   border-radius: 50%;
+   top: 242px;
+   left: 230px;
+   z-index: 10;
+}
+.smallScreenRound{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    z-index: 20;
+    border-radius: 50%;
+    top: 82px;
+    left: 67px;
+    display: none;
+}
+@keyframes roatate {
+    0%{ transform: rotate(0deg);}
+    8.3%{ transform: rotate(30deg);}
+    16.6%{ transform: rotate(60deg);}
+    24.9%{ transform: rotate(90deg);}
+    33.2%{ transform: rotate(120deg);}
+    41.5%{ transform: rotate(150deg);}
+    49.8%{ transform: rotate(180deg);}
+    58.1%{ transform: rotate(210deg);}
+    66.4%{ transform: rotate(240deg);}
+    74.7%{ transform: rotate(270deg);}
+    83%{ transform: rotate(300deg);}
+    91.3%{ transform: rotate(330deg);}
+    100%{ transform: rotate(360deg);}
+}
+@media screen and (max-width: 1000px) {
+  main img{
+    width: 300px;
+  }
+ h1{
+    font-size: 50px !important;
+ }
+.parent{
+    overflow: hidden;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+    .lineClock{
+        display: none;
+    }
+    .smallScreenRound{
+        display: block;
+    }
+    .AlineClock{
+        visibility: visible;
+    }
+    main{
+        margin-bottom: 10px;
+    }
+    .parent{
+        padding-bottom: 50px;
+}
+}
+
+

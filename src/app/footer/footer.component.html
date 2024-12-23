@@ -1,0 +1,11 @@
+<section class="main" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
+    <div class="leftSide">
+
+    </div>
+    <div class="rightSide">
+        <p-floatlabel variant="on">
+            <input pInputText id="on_label" [(ngModel)]="emailAddress" autocomplete="on" />
+            <label for="on_label">Email</label>
+        </p-floatlabel>
+    </div>
+</section>

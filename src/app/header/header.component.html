@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" 
+     [ngClass]="{ 'dark-mode': inputFromParent, 'light-mode': !inputFromParent }">
+  <div class="container-fluid">
+    <!-- Logo/Brand -->
+    <a class="navbar-brand" routerLink="/">HOUPACI</a>
+
+    <!-- Toggle button for smaller screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar items -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- Demo link -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" 
+             [routerLinkActiveOptions]="{ exact: true }">Demo</a>
+        </li>
+
+        <!-- Home link -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
