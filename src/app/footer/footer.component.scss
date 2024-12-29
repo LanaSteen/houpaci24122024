@@ -35,6 +35,14 @@
                     scale: 120%;
                 }
             }
+            .adminLogIn{
+                text-decoration: underline;
+                &:hover{
+                    scale: 100%;
+                    color: rgb(4, 61, 62);
+                    cursor: pointer;
+                }
+            }
             .socials{
                 display: flex;
                 gap: 20px;

@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, FloatLabelModule, InputTextModule],
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, FloatLabelModule, InputTextModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

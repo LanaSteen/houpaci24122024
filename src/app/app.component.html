@@ -19,6 +19,6 @@
    <i class="fa-solid fa-sun mySun" (click)="toggleMode()" *ngIf="isDarkMode"></i>
   </div>
   
-  <footer>
+  <footer *ngIf="showFooter">
     <app-footer></app-footer>
   </footer>

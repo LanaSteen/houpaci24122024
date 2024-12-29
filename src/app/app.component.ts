@@ -4,7 +4,8 @@ import { ThemeService } from './common/services/theme.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
 // https://jsonplaceholder.typicode.com/guide/
 @Component({
   selector: 'app-root',
@@ -19,11 +20,21 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'houpaci';
   isDarkMode?: boolean;
-  constructor(private themeService: ThemeService){
+  showFooter = true;  
+  constructor(private themeService: ThemeService, private router: Router){
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
     });
   }
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(event => {
+      const currentRoute = this.router.url;
+      this.showFooter = !(currentRoute.includes('/admin') || currentRoute.includes('/login'));
+    });
+  }
+
   scrollToTop(): void {
     window.scrollTo({
       top: 0,
