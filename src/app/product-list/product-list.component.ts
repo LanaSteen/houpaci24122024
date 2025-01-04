@@ -4,6 +4,7 @@ import { ProductService } from '../common/services/product.service';
 import { Product } from '../Models/product.model';
 import { ThemeService } from '../common/services/theme.service';
 import { PaginatorModule } from 'primeng/paginator'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -14,40 +15,25 @@ import { PaginatorModule } from 'primeng/paginator';
 })
 export class ProductListComponent implements OnInit{
   products: Product[] = [];
-  paginatedProducts: Product[] = [];  // Make it mutable by removing readonly
+  paginatedProducts: Product[] = [];  
   currentPage: number = 1;
   itemsPerPage: number = 6;
   isDarkMode?: boolean;
-  constructor(private productService: ProductService, private themeService: ThemeService) {
+  constructor(
+    private productService: ProductService, 
+    private themeService: ThemeService, 
+    private router: Router) {
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
       console.log(this.isDarkMode)
     });
   }
 
-  // ngOnInit(): void {
-  //   this.loadProducts();
-  // }
-
-  // loadProducts(): void {
-  //   this.productService.getProducts().subscribe((products) => {
-  //     this.products = products;
-  //   });
-  // }
-
-  // get paginatedProducts() {
-  //   const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-  //   const endIndex = startIndex + this.itemsPerPage;
-  //   return this.products.slice(startIndex, endIndex);
-  // }
 
   setPage(page: number): void {
     this.currentPage = page;
   }
 
-
-  // products: Product[] = [];
-  // paginatedProducts: Product[] = [];
   first: number = 0;
   rows: number = 6;
 
@@ -68,8 +54,11 @@ export class ProductListComponent implements OnInit{
   }
 
   onPageChange(event: any): void {
-    this.first = event.first;  // Starting index of the page
-    this.rows = event.rows;    // Number of rows per page
-    this.paginateData();       // Call to update the displayed data based on pagination
+    this.first = event.first;  
+    this.rows = event.rows;    
+    this.paginateData();     
+  }
+  goToProductDetails(productId: number): void {
+    this.router.navigate(['/product-details', productId]); 
   }
 }

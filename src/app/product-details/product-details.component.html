@@ -1,0 +1,18 @@
+
+
+  <section *ngIf="product" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
+    <div class="product-list">
+      <div  class="product-item">
+        <div class="immCont" [ngStyle]="{'background-image': 'url(' + product.picturePath + ')'}"
+   >
+        </div>
+        <h3 [ngClass]="{ 'dark-mode-text': isDarkMode, 'light-mode-text': !isDarkMode }">{{ product.title }}</h3>
+        <p [ngClass]="{ 'dark-mode-text': isDarkMode, 'light-mode-text': !isDarkMode }">{{ product.description }}</p>
+      </div>
+    </div>
+  </section>
+  <div class="back" (click)="navigateToProduct()" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
+    <i class="fa-solid fa-arrow-left" 
+    [ngClass]="{ 'dark-mode-text': isDarkMode, 'light-mode-text': !isDarkMode }"></i> 
+    <span [ngClass]="{ 'dark-mode-text': isDarkMode, 'light-mode-text': !isDarkMode }">Back</span>
+  </div>

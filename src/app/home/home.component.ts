@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../common/services/theme.service';
 import { CommonModule } from '@angular/common';
+import { GalleryService } from '../common/services/gallery.service';
+import { Gallery } from '../Models/gallery.model';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +13,18 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   isDarkMode?: boolean;
-  constructor(private themeService: ThemeService){
+  constructor(private themeService: ThemeService, private galleryService: GalleryService){
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
-      console.log(this.isDarkMode)
     });
+    this.galleryService.getGallery().subscribe((galleryData) => {
+      this.imageGroups = galleryData; 
+      console.log(this.imageGroups)
+    });
+  }
+
+  imageGroups: Gallery[] = []
+  ngOnInit(): void {
+    
   }
 }

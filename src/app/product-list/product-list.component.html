@@ -3,7 +3,8 @@
 <section [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
     <div class="product-list">
       <div *ngFor="let product of paginatedProducts" class="product-item">
-        <div class="immCont" [ngStyle]="{'background-image': 'url(' + product.picturePath + ')'}">
+        <div class="immCont" [ngStyle]="{'background-image': 'url(' + product.picturePath + ')'}"
+        (click)="goToProductDetails(product.id)">
         </div>
         <h3 [ngClass]="{ 'dark-mode-text': isDarkMode, 'light-mode-text': !isDarkMode }">{{ product.title }}</h3>
         <p [ngClass]="{ 'dark-mode-text': isDarkMode, 'light-mode-text': !isDarkMode }">{{ product.description }}</p>

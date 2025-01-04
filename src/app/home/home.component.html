@@ -3,14 +3,29 @@
     
 </main>
 
-<section class="pictureAcc" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
 
-    <div class="con">
-      <img src="https://plus.unsplash.com/premium_photo-1723777236925-a07c8cee66dd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img src="https://plus.unsplash.com/premium_photo-1664804191180-be0c073f2004?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img src="https://plus.unsplash.com/premium_photo-1679329103267-624f9775f317?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img src="https://plus.unsplash.com/premium_photo-1661274114223-44b3be45ad91?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img src="https://plus.unsplash.com/premium_photo-1691854353115-d4b09974a6e6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+<div id="carouselExampleAutoplaying" class="carousel slide myCarousel" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div *ngFor="let images of imageGroups; let groupIndex = index" class="carousel-item" [class.active]="groupIndex === 0">
+      <section class="pictureAcc" [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
+        <div class="con">
+     
+          <img *ngFor="let img of images.imgSlides; let imgIndex = index"
+               [src]="img"
+               alt=""
+               [ngClass]="imgIndex === images.imgSlides.length - 1 || imgIndex === 0 ? 'lastImg' : ''" 
+               class="carousel-image" />
+        </div>
+      </section>
+    </div>
   </div>
-  
-</section>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
