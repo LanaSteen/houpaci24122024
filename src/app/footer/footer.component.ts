@@ -18,13 +18,13 @@ export class FooterComponent {
   constructor(private themeService: ThemeService){
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
-      console.log(this.isDarkMode)
+      // console.log(this.isDarkMode)
     });
   }
 
   emailAddress? : string | null;
   subscribe(){
-    console.log(this.emailAddress)
+    // console.log(this.emailAddress)
     this.emailAddress= null;
   }
 }

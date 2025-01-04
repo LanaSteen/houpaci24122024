@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit{
     private router: Router) {
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
-      console.log(this.isDarkMode)
+      // console.log(this.isDarkMode)
     });
   }
 

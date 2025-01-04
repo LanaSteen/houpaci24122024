@@ -19,7 +19,7 @@ export class HomeComponent {
     });
     this.galleryService.getGallery().subscribe((galleryData) => {
       this.imageGroups = galleryData; 
-      console.log(this.imageGroups)
+      // console.log(this.imageGroups)
     });
   }
 

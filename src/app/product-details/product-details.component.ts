@@ -23,7 +23,7 @@ export class ProductDetailsComponent {
   ){
     this.themeService.darkMode$.subscribe((darkMode) => {
       this.isDarkMode = darkMode;
-      console.log(this.isDarkMode)
+      // console.log(this.isDarkMode)
     });
   }
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class ProductDetailsComponent {
     if (productId) {
       this.productService.getProducts().subscribe((products) => {
         this.product = products.find((prod) => prod.id == productId);
-        console.log(this.product)
+        // console.log(this.product)
       });
     }
   }
