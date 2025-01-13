@@ -1,0 +1,98 @@
+
+<!-- <div class="container">
+
+    <h2>Subscribers List</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let subscriber of subscribers">
+          <td>{{ subscriber.id }}</td>
+          <td>{{ subscriber.name }}</td>
+          <td>{{ subscriber.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+
+
+  <div class="container">
+    <h2>Subscribers List</h2>
+
+    <p-table
+      [value]="subscribers"
+      [rows]="10"
+      [paginator]="true"
+      [globalFilterFields]="['email']"
+      [tableStyle]="{ 'min-width': '50rem' }"
+      [(selection)]="selectedSubscribers"
+      [rowHover]="true"
+      dataKey="id"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+      [showCurrentPageReport]="true"
+    >
+        <!-- <ng-template #caption>
+            <div class="flex items-center justify-between">
+                <h5 class="m-0">Manage Subscribers</h5>
+                <p-iconfield style="color: white;">
+                    <p-inputicon styleClass="pi pi-search" />
+                </p-iconfield>
+            </div>
+        </ng-template> -->
+
+        <ng-template #header>
+            <tr>
+                <th style="width: 3rem">
+                    <p-tableHeaderCheckbox />
+                </th>
+                <th pSortableColumn="id" style="min-width: 6rem">ID <p-sortIcon field="id" /></th>
+                <th pSortableColumn="email" style="min-width: 16rem">Email <p-sortIcon field="email" /></th>
+                <th style="min-width: 12rem"></th>
+            </tr>
+        </ng-template>
+
+        <ng-template #body let-subscriber>
+            <tr>
+                <td style="width: 3rem">
+                    <p-tableCheckbox [value]="subscriber" />
+                </td>
+                <td>{{ subscriber.id }}</td>
+                <td>{{ subscriber.email }}</td>
+                <td>
+                    <p-button icon="pi pi-pencil" class="mr-2" [rounded]="true" [outlined]="true" (click)="editSubscriber(subscriber)" />
+                    <p-button icon="pi pi-trash" severity="danger" [rounded]="true" [outlined]="true" (click)="deleteSubscriber(subscriber.id)" />
+                </td>
+            </tr>
+        </ng-template>
+
+  
+        <ng-template #summary>
+            <div class="flex items-center justify-between">
+                In total there are {{ subscribers ? subscribers.length : 0 }} subscribers.
+            </div>
+        </ng-template>
+    </p-table>
+    <button type="" class="delBtn" (click)="deleteSelected()">Delete Selected Subscribers</button>
+</div>
+
+
+<p-dialog [(visible)]="editDialogVisible" [style]="{ width: '450px' }" header="Edit Subscriber" [modal]="true" [closable]="true">
+    <div class="contDialog">
+        <div>
+            <label for="email" class="block font-bold mb-3 lableEmail">Email</label>
+            <input pInputText id="email" [(ngModel)]="selectedSubscriber.email" required />
+        </div>
+        <div class="btnCont">
+            <button class="saveBtn" type="" (click)="saveSubscriber()">Save</button>
+
+        </div>
+    </div>
+
+
+</p-dialog>

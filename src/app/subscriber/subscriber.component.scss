@@ -1,0 +1,60 @@
+
+
+
+
+
+
+::ng-deep {
+    .p-button-outlined {
+        background: #34d399a5 !important; 
+    }
+    .p-button-danger{
+        background: red !important; 
+    }
+    .p-button-outlined:hover {
+        background: #34d39900 !important; 
+    }
+    .p-button-danger:hover{
+        background: rgba(255, 0, 0, 0) !important; 
+    }
+}
+
+.delBtn{
+    width: 300px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: red;
+            color: black;
+            margin:20px 0px 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+
+            &:hover{
+                scale: 105%;
+            }
+}
+
+.contDialog{
+    .lableEmail{
+        margin-right: 20px !important;
+    }
+    #email{
+        width: 70%;
+    }
+    .btnCont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .saveBtn{
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #34d399a5;
+            &:hover{
+                scale: 105%;
+            }
+        }
+    }
+ 
+}
