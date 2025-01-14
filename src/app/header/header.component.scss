@@ -14,3 +14,10 @@
 .nav-link{
     padding: 10px 20px !important;
 }
+.navbar-nav > li :hover{
+    cursor: pointer;
+}
+
+.navbar-brand:hover{
+  cursor: pointer;
+}

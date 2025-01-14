@@ -13,6 +13,15 @@
     color: rgb(247, 170, 27) !important;
  }
 
+  ::ng-deep {  .p-paginator {
+    // background: rgba(209, 209, 209, 0.884) !important;
+    background: black !important;
+  }
+  .p-select-overlay, .p-select  {
+      background: #e1f5eff6 !important;
+  }
+ }
+
  .product-list{
     margin-top: 50px;
     padding: 50px;
@@ -77,5 +86,6 @@
         }
     }
  }
+
 
 

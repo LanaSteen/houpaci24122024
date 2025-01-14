@@ -8,7 +8,17 @@
     color: black !important;;
 
 }
+::ng-deep {
+    .p-inputtext {
+    background: black !important;
+    color: white !important
+}
+.p-floatlabel-on:has(input:focus) label {
+    background: black !important;
+    padding: 5px 10px !important;
+}
 
+}
 .main{
     width: 100%;
     // height: 70vh;

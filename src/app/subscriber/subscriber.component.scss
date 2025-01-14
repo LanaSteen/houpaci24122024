@@ -6,10 +6,10 @@
 
 ::ng-deep {
     .p-button-outlined {
-        background: #34d399a5 !important; 
+        background: #34d3996b !important; 
     }
     .p-button-danger{
-        background: red !important; 
+        background: rgba(102, 62, 62, 0.74) !important; 
     }
     .p-button-outlined:hover {
         background: #34d39900 !important; 
@@ -17,13 +17,28 @@
     .p-button-danger:hover{
         background: rgba(255, 0, 0, 0) !important; 
     }
+    .p-datatable-tbody > tr {
+        background: rgb(224, 223, 223) !important;
+         &:hover{
+            background: rgb(214, 213, 213) !important;
+         }
+    }
+    .p-datatable-thead> tr > th {
+        background: rgba(209, 209, 209, 0.884) !important;
+         &:hover{
+            background: rgb(214, 213, 213) !important;
+         }
+    }
+    .p-paginator {
+        background: rgba(209, 209, 209, 0.884) !important;
+    }
 }
 
 .delBtn{
     width: 300px;
             height: 40px;
             border-radius: 5px;
-            background-color: red;
+            background-color: rgba(216, 90, 90, 0.822);
             color: black;
             margin:20px 0px 50px;
             border-radius: 10px;

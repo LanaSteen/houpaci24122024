@@ -1,27 +1,4 @@
 
-<!-- <div class="container">
-
-    <h2>Subscribers List</h2>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let subscriber of subscribers">
-          <td>{{ subscriber.id }}</td>
-          <td>{{ subscriber.name }}</td>
-          <td>{{ subscriber.email }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
-
-
-
   <div class="container">
     <h2>Subscribers List</h2>
 
@@ -34,18 +11,9 @@
       [(selection)]="selectedSubscribers"
       [rowHover]="true"
       dataKey="id"
-      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
       [showCurrentPageReport]="true"
     >
-        <!-- <ng-template #caption>
-            <div class="flex items-center justify-between">
-                <h5 class="m-0">Manage Subscribers</h5>
-                <p-iconfield style="color: white;">
-                    <p-inputicon styleClass="pi pi-search" />
-                </p-iconfield>
-            </div>
-        </ng-template> -->
-
+    <!-- currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" -->
         <ng-template #header>
             <tr>
                 <th style="width: 3rem">
